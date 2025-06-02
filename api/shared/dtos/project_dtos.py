@@ -1,11 +1,13 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List, Dict, Any
 from datetime import datetime
 from enum import Enum
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel, Field
 
 
 class ProjectStatus(str, Enum):
     """Enum for project status"""
+
     PLANNING = "planning"
     IN_PROGRESS = "in_progress"
     ON_HOLD = "on_hold"
@@ -15,6 +17,7 @@ class ProjectStatus(str, Enum):
 
 class TaskPriority(str, Enum):
     """Enum for task priority"""
+
     LOW = "low"
     MEDIUM = "medium"
     HIGH = "high"
@@ -23,6 +26,7 @@ class TaskPriority(str, Enum):
 
 class TaskStatus(str, Enum):
     """Enum for task status"""
+
     TODO = "todo"
     IN_PROGRESS = "in_progress"
     REVIEW = "review"
@@ -31,6 +35,7 @@ class TaskStatus(str, Enum):
 
 class ProjectCreateDTO(BaseModel):
     """DTO for creating a new project"""
+
     name: str = Field(..., min_length=3, max_length=100)
     description: Optional[str] = None
     start_date: Optional[datetime] = None
@@ -42,6 +47,7 @@ class ProjectCreateDTO(BaseModel):
 
 class ProjectUpdateDTO(BaseModel):
     """DTO for updating a project"""
+
     name: Optional[str] = Field(None, min_length=3, max_length=100)
     description: Optional[str] = None
     start_date: Optional[datetime] = None
@@ -53,6 +59,7 @@ class ProjectUpdateDTO(BaseModel):
 
 class ProjectResponseDTO(BaseModel):
     """DTO for project response"""
+
     id: str
     name: str
     description: Optional[str] = None
@@ -68,6 +75,7 @@ class ProjectResponseDTO(BaseModel):
 
 class TaskCreateDTO(BaseModel):
     """DTO for creating a new task"""
+
     title: str = Field(..., min_length=3, max_length=100)
     description: Optional[str] = None
     project_id: str
@@ -81,6 +89,7 @@ class TaskCreateDTO(BaseModel):
 
 class TaskUpdateDTO(BaseModel):
     """DTO for updating a task"""
+
     title: Optional[str] = Field(None, min_length=3, max_length=100)
     description: Optional[str] = None
     assignee_id: Optional[str] = None
@@ -93,6 +102,7 @@ class TaskUpdateDTO(BaseModel):
 
 class TaskResponseDTO(BaseModel):
     """DTO for task response"""
+
     id: str
     title: str
     description: Optional[str] = None
@@ -110,6 +120,7 @@ class TaskResponseDTO(BaseModel):
 
 class ProjectMemberCreateDTO(BaseModel):
     """DTO for adding a member to a project"""
+
     project_id: str
     user_id: str
     role: str = "member"  # Default role is member
@@ -117,11 +128,13 @@ class ProjectMemberCreateDTO(BaseModel):
 
 class ProjectMemberUpdateDTO(BaseModel):
     """DTO for updating a project member"""
+
     role: str
 
 
 class ProjectMemberResponseDTO(BaseModel):
     """DTO for project member response"""
+
     id: str
     project_id: str
     user_id: str
@@ -131,6 +144,7 @@ class ProjectMemberResponseDTO(BaseModel):
 
 class ActivityLogDTO(BaseModel):
     """DTO for activity log"""
+
     id: str
     project_id: str
     user_id: str

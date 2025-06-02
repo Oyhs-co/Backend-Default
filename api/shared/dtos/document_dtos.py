@@ -1,11 +1,13 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List, Dict, Any
 from datetime import datetime
 from enum import Enum
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel, Field
 
 
 class DocumentType(str, Enum):
     """Enum for document types"""
+
     FILE = "file"
     FOLDER = "folder"
     LINK = "link"
@@ -13,6 +15,7 @@ class DocumentType(str, Enum):
 
 class DocumentCreateDTO(BaseModel):
     """DTO for creating a new document"""
+
     name: str = Field(..., min_length=1, max_length=255)
     project_id: str
     parent_id: Optional[str] = None  # For folder hierarchy
@@ -26,6 +29,7 @@ class DocumentCreateDTO(BaseModel):
 
 class DocumentUpdateDTO(BaseModel):
     """DTO for updating a document"""
+
     name: Optional[str] = Field(None, min_length=1, max_length=255)
     parent_id: Optional[str] = None
     description: Optional[str] = None
@@ -35,6 +39,7 @@ class DocumentUpdateDTO(BaseModel):
 
 class DocumentResponseDTO(BaseModel):
     """DTO for document response"""
+
     id: str
     name: str
     project_id: str
@@ -54,6 +59,7 @@ class DocumentResponseDTO(BaseModel):
 
 class DocumentVersionDTO(BaseModel):
     """DTO for document version"""
+
     id: str
     document_id: str
     version: int
@@ -67,6 +73,7 @@ class DocumentVersionDTO(BaseModel):
 
 class DocumentPermissionDTO(BaseModel):
     """DTO for document permissions"""
+
     id: str
     document_id: str
     user_id: Optional[str] = None
@@ -81,5 +88,6 @@ class DocumentPermissionDTO(BaseModel):
 
 class DocumentUploadResponseDTO(BaseModel):
     """DTO for document upload response"""
+
     document: DocumentResponseDTO
     upload_url: str  # Presigned URL for direct upload to storage

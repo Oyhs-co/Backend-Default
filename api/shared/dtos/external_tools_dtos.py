@@ -1,11 +1,13 @@
-from pydantic import BaseModel, Field, HttpUrl
-from typing import Optional, Dict, Any, List
 from datetime import datetime
 from enum import Enum
+from typing import Any, Dict, Optional
+
+from pydantic import BaseModel, HttpUrl
 
 
 class ExternalToolType(str, Enum):
     """Enum for external tool types"""
+
     GITHUB = "github"
     GOOGLE_DRIVE = "google_drive"
     DROPBOX = "dropbox"
@@ -18,6 +20,7 @@ class ExternalToolType(str, Enum):
 
 class OAuthProviderDTO(BaseModel):
     """DTO for OAuth provider information"""
+
     id: str
     name: str
     type: ExternalToolType
@@ -31,6 +34,7 @@ class OAuthProviderDTO(BaseModel):
 
 class OAuthRequestDTO(BaseModel):
     """DTO for OAuth request"""
+
     provider_id: str
     redirect_uri: Optional[HttpUrl] = None
     scope: Optional[str] = None
@@ -39,6 +43,7 @@ class OAuthRequestDTO(BaseModel):
 
 class OAuthCallbackDTO(BaseModel):
     """DTO for OAuth callback"""
+
     provider_id: str
     code: str
     state: Optional[str] = None
@@ -47,6 +52,7 @@ class OAuthCallbackDTO(BaseModel):
 
 class ExternalToolConnectionDTO(BaseModel):
     """DTO for external tool connection"""
+
     id: str
     user_id: str
     provider_id: str
@@ -64,6 +70,7 @@ class ExternalToolConnectionDTO(BaseModel):
 
 class ExternalToolConnectionCreateDTO(BaseModel):
     """DTO for creating an external tool connection"""
+
     user_id: str
     provider_id: str
     access_token: str
@@ -77,6 +84,7 @@ class ExternalToolConnectionCreateDTO(BaseModel):
 
 class ExternalResourceDTO(BaseModel):
     """DTO for external resource"""
+
     id: str
     connection_id: str
     resource_id: str
@@ -91,6 +99,7 @@ class ExternalResourceDTO(BaseModel):
 
 class ExternalResourceSyncDTO(BaseModel):
     """DTO for external resource synchronization"""
+
     connection_id: str
     resource_id: str
     project_id: Optional[str] = None

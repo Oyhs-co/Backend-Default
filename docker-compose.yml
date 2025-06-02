@@ -2,176 +2,165 @@ version: '3.8'
 
 services:
   # API Gateway
-  api-gateway:
+  api_gateway:
     build:
       context: .
       dockerfile: Dockerfile
-    command: uvicorn api.api-gateway.main:app --host 0.0.0.0 --port 8000
+    command: python -m uvicorn api.api_gateway.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir /app/api/api_gateway
     ports:
       - "8000:8000"
+    env_file:
+      - .env
     environment:
-      - AUTH_SERVICE_URL=http://auth-service:8001
-      - PROJECT_SERVICE_URL=http://project-service:8002
-      - DOCUMENT_SERVICE_URL=http://document-service:8003
-      - NOTIFICATION_SERVICE_URL=http://notification-service:8004
-      - EXTERNAL_TOOLS_SERVICE_URL=http://external-tools-service:8005
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskhub
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - AUTH_SERVICE_URL=http://auth_service:8001
+      - PROJECT_SERVICE_URL=http://project_service:8002
+      - DOCUMENT_SERVICE_URL=http://document_service:8003
+      - NOTIFICATION_SERVICE_URL=http://notification_service:8004
+      - EXTERNAL_TOOLS_SERVICE_URL=http://external_tools_service:8005
+      - DATABASE_URL=postgresql://postgres:Adminqwert1234db@db.bhpkrxaqmlnyoxmcxxth.supabase.co:5432/postgres
       - JWT_ALGORITHM=HS256
       - ACCESS_TOKEN_EXPIRE_MINUTES=30
       - REFRESH_TOKEN_EXPIRE_DAYS=7
-      - SUPABASE_URL=${SUPABASE_URL}
-      - SUPABASE_KEY=${SUPABASE_KEY}
+      - PYTHONPATH=/app
     depends_on:
-      - auth-service
-      - project-service
-      - document-service
-      - notification-service
-      - external-tools-service
+      - auth_service
+      - project_service
+      - document_service
+      - notification_service
+      - external_tools_service
     networks:
       - taskhub-network
-    restart: always
+    restart: unless-stopped
+    volumes:
+      - ./api:/app/api
 
   # Auth Service
-  auth-service:
+  auth_service:
     build:
       context: .
       dockerfile: Dockerfile
-    command: uvicorn api.auth-service.app.main:app --host 0.0.0.0 --port 8001
+    command: python -m uvicorn api.auth_service.app.main:app --host 0.0.0.0 --port 8001 --reload --reload-dir /app/api/auth_service/app
     ports:
       - "8001:8001"
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskhub
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DATABASE_URL=postgresql://postgres:Adminqwert1234db@db.bhpkrxaqmlnyoxmcxxth.supabase.co:5432/postgres
       - JWT_ALGORITHM=HS256
       - ACCESS_TOKEN_EXPIRE_MINUTES=30
       - REFRESH_TOKEN_EXPIRE_DAYS=7
-      - SUPABASE_URL=${SUPABASE_URL}
-      - SUPABASE_KEY=${SUPABASE_KEY}
+      - PYTHONPATH=/app
     depends_on:
-      - db
       - rabbitmq
     networks:
       - taskhub-network
-    restart: always
+    restart: unless-stopped
+    volumes:
+      - ./api:/app/api
 
   # Project Service
-  project-service:
+  project_service:
     build:
       context: .
       dockerfile: Dockerfile
-    command: uvicorn api.project-service.app.main:app --host 0.0.0.0 --port 8002
+    command: python -m uvicorn api.project_service.app.main:app --host 0.0.0.0 --port 8002 --reload --reload-dir /app/api/project_service/app
     ports:
       - "8002:8002"
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskhub
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DATABASE_URL=postgresql://postgres:Adminqwert1234db@db.bhpkrxaqmlnyoxmcxxth.supabase.co:5432/postgres
       - JWT_ALGORITHM=HS256
       - RABBITMQ_HOST=rabbitmq
       - RABBITMQ_PORT=5672
       - RABBITMQ_USER=guest
       - RABBITMQ_PASSWORD=guest
+      - PYTHONPATH=/app
     depends_on:
-      - db
       - rabbitmq
     networks:
       - taskhub-network
-    restart: always
+    restart: unless-stopped
+    volumes:
+      - ./api:/app/api
 
   # Document Service
-  document-service:
+  document_service:
     build:
       context: .
       dockerfile: Dockerfile
-    command: uvicorn api.document-service.app.main:app --host 0.0.0.0 --port 8003
+    command: python -m uvicorn api.document_service.app.main:app --host 0.0.0.0 --port 8003 --reload --reload-dir /app/api/document_service/app
     ports:
       - "8003:8003"
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskhub
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DATABASE_URL=postgresql://postgres:Adminqwert1234db@db.bhpkrxaqmlnyoxmcxxth.supabase.co:5432/postgres
       - JWT_ALGORITHM=HS256
-      - SUPABASE_URL=${SUPABASE_URL}
-      - SUPABASE_KEY=${SUPABASE_KEY}
       - RABBITMQ_HOST=rabbitmq
       - RABBITMQ_PORT=5672
       - RABBITMQ_USER=guest
       - RABBITMQ_PASSWORD=guest
+      - PYTHONPATH=/app
     depends_on:
-      - db
       - rabbitmq
     networks:
       - taskhub-network
-    restart: always
+    restart: unless-stopped
+    volumes:
+      - ./api:/app/api
 
   # Notification Service
-  notification-service:
+  notification_service:
     build:
       context: .
       dockerfile: Dockerfile
-    command: uvicorn api.notification-service.app.main:app --host 0.0.0.0 --port 8004
+    command: python -m uvicorn api.notification_service.app.main:app --host 0.0.0.0 --port 8004 --reload --reload-dir /app/api/notification_service/app
     ports:
       - "8004:8004"
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskhub
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DATABASE_URL=postgresql://postgres:Adminqwert1234db@db.bhpkrxaqmlnyoxmcxxth.supabase.co:5432/postgres
       - JWT_ALGORITHM=HS256
       - RABBITMQ_HOST=rabbitmq
       - RABBITMQ_PORT=5672
       - RABBITMQ_USER=guest
       - RABBITMQ_PASSWORD=guest
-      - EMAIL_HOST=${EMAIL_HOST}
-      - EMAIL_PORT=${EMAIL_PORT}
-      - EMAIL_USER=${EMAIL_USER}
-      - EMAIL_PASSWORD=${EMAIL_PASSWORD}
-      - EMAIL_FROM=${EMAIL_FROM}
-      - PUSH_API_KEY=${PUSH_API_KEY}
-      - PUSH_API_URL=${PUSH_API_URL}
-      - SMS_API_KEY=${SMS_API_KEY}
-      - SMS_API_URL=${SMS_API_URL}
+      - PYTHONPATH=/app
     depends_on:
-      - db
       - rabbitmq
     networks:
       - taskhub-network
-    restart: always
+    restart: unless-stopped
+    volumes:
+      - ./api:/app/api
 
   # External Tools Service
-  external-tools-service:
+  external_tools_service:
     build:
       context: .
       dockerfile: Dockerfile
-    command: uvicorn api.external-tools-service.app.main:app --host 0.0.0.0 --port 8005
+    command: python -m uvicorn api.external_tools_service.app.main:app --host 0.0.0.0 --port 8005 --reload --reload-dir /app/api/external_tools_service/app
     ports:
       - "8005:8005"
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/taskhub
-      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DATABASE_URL=postgresql://postgres:Adminqwert1234db@db.bhpkrxaqmlnyoxmcxxth.supabase.co:5432/postgres
       - JWT_ALGORITHM=HS256
       - RABBITMQ_HOST=rabbitmq
       - RABBITMQ_PORT=5672
       - RABBITMQ_USER=guest
       - RABBITMQ_PASSWORD=guest
+      - PYTHONPATH=/app
     depends_on:
-      - db
       - rabbitmq
     networks:
       - taskhub-network
-    restart: always
-
-  # Database
-  db:
-    image: postgres:16
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=taskhub
+    restart: unless-stopped
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - taskhub-network
-    restart: always
+      - ./api:/app/api
 
   # RabbitMQ
   rabbitmq:
@@ -186,12 +175,11 @@ services:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - taskhub-network
-    restart: always
+    restart: unless-stopped
 
 networks:
   taskhub-network:
     driver: bridge
 
 volumes:
-  postgres_data:
   rabbitmq_data:

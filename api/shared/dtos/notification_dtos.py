@@ -1,11 +1,13 @@
-from pydantic import BaseModel, Field
-from typing import Optional, Dict, Any, List
 from datetime import datetime
 from enum import Enum
+from typing import Any, Dict, List, Optional
+
+from pydantic import BaseModel
 
 
 class NotificationType(str, Enum):
     """Enum for notification types"""
+
     SYSTEM = "system"
     PROJECT = "project"
     TASK = "task"
@@ -17,6 +19,7 @@ class NotificationType(str, Enum):
 
 class NotificationPriority(str, Enum):
     """Enum for notification priority"""
+
     LOW = "low"
     NORMAL = "normal"
     HIGH = "high"
@@ -24,6 +27,7 @@ class NotificationPriority(str, Enum):
 
 class NotificationChannel(str, Enum):
     """Enum for notification channels"""
+
     IN_APP = "in_app"
     EMAIL = "email"
     PUSH = "push"
@@ -32,6 +36,7 @@ class NotificationChannel(str, Enum):
 
 class NotificationCreateDTO(BaseModel):
     """DTO for creating a notification"""
+
     user_id: str
     type: NotificationType
     title: str
@@ -47,6 +52,7 @@ class NotificationCreateDTO(BaseModel):
 
 class NotificationResponseDTO(BaseModel):
     """DTO for notification response"""
+
     id: str
     user_id: str
     type: NotificationType
@@ -67,11 +73,13 @@ class NotificationResponseDTO(BaseModel):
 
 class NotificationUpdateDTO(BaseModel):
     """DTO for updating a notification"""
+
     is_read: Optional[bool] = None
 
 
 class NotificationBatchCreateDTO(BaseModel):
     """DTO for creating multiple notifications at once"""
+
     user_ids: List[str]
     type: NotificationType
     title: str
@@ -87,6 +95,7 @@ class NotificationBatchCreateDTO(BaseModel):
 
 class NotificationPreferencesDTO(BaseModel):
     """DTO for user notification preferences"""
+
     user_id: str
     email_enabled: bool = True
     push_enabled: bool = True
@@ -97,4 +106,6 @@ class NotificationPreferencesDTO(BaseModel):
     quiet_hours_enabled: bool = False
     quiet_hours_start: Optional[str] = None  # HH:MM format
     quiet_hours_end: Optional[str] = None  # HH:MM format
-    preferences_by_type: Optional[Dict[str, Dict[str, bool]]] = None  # Type -> Channel -> Enabled
+    preferences_by_type: Optional[Dict[str, Dict[str, bool]]] = (
+        None  # Type -> Channel -> Enabled
+    )

@@ -1,9 +1,17 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
+# Set Python path
+ENV PYTHONPATH=/app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install Poetry
-RUN pip install poetry==1.8.2
+RUN pip install --no-cache-dir poetry==1.8.2
 
 # Copy poetry configuration files
 COPY pyproject.toml poetry.lock* ./
@@ -12,16 +20,16 @@ COPY pyproject.toml poetry.lock* ./
 RUN poetry config virtualenvs.create false
 
 # Install dependencies
-RUN poetry install --no-dev
+RUN poetry install --without dev --no-interaction --no-ansi
 
 # Copy application code
 COPY . .
 
+# Create necessary __init__.py files
+RUN find /app/api -type d -exec touch {}/__init__.py \;
+
 # Expose port
 EXPOSE 8000
 
-# Set environment variables
-ENV PYTHONPATH=/app
-
-# Run the application
-CMD ["uvicorn", "api.api-gateway.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Default command (will be overridden by docker-compose)
+CMD ["python", "-m", "uvicorn", "api.api_gateway.main:app", "--host", "0.0.0.0", "--port", "8000"]
