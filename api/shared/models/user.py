@@ -36,6 +36,8 @@ class User(BaseModel):
     documents = relationship("Document", back_populates="creator")
     notifications = relationship("Notification", back_populates="user")
     external_connections = relationship("ExternalToolConnection", back_populates="user")
+    activity_logs = relationship("ActivityLog", back_populates="user")
+    notification_preferences = relationship("NotificationPreference", back_populates="user")
 
 
 class Role(BaseModel):

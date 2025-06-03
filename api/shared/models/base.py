@@ -1,9 +1,9 @@
-import uuid
+from sqlalchemy.orm import declarative_base
 from datetime import datetime, timezone
+import uuid
 from typing import Any, Dict
 
 from sqlalchemy import Column, DateTime, String
-from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 

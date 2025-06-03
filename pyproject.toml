@@ -37,6 +37,7 @@ flake8 = "^7.2.0"
 mypy = "^1.16.0"
 pytest-cov = "^6.1.1"
 requests = "^2.32.3"
+pytest-asyncio = "^1.0.0"
 
 [tool.poetry.scripts]
 start = "uvicorn api.gateway.services.projects.app.main:app"
@@ -53,6 +54,9 @@ target-version = ["py39"]
 [tool.isort]
 profile = "black"
 line_length = 88
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
 
 [tool.mypy]
 python_version = "3.13.3"

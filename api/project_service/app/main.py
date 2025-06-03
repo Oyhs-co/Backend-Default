@@ -11,6 +11,7 @@ from api.project_service.app.commands.task_commands import (
     ChangeTaskStatusCommand,
     CommandInvoker,
 )
+from api.shared.middleware.auth_middleware import auth_middleware
 from api.project_service.app.schemas.activity import ActivityLogResponseDTO
 from api.project_service.app.schemas.project import (
     ProjectCreateDTO,
