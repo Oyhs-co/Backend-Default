@@ -271,7 +271,9 @@ class ExternalToolsService:
                 connection_data.account_email or user_info.get("email")
             )
             existing_connection.is_active = True
-            existing_connection.meta_data = (connection_data.meta_data or {}) or user_info
+            existing_connection.meta_data = (
+                connection_data.meta_data or {}
+            ) or user_info
             existing_connection.last_used_at = datetime.now(timezone.utc)
             existing_connection.expires_at = connection_data.expires_at
             existing_connection.updated_at = datetime.now(timezone.utc)

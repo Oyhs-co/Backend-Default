@@ -66,7 +66,9 @@ class DocumentFactory:
             )
         elif document_type == DocumentType.LINK:
             if url is None:
-                raise InvalidDocumentTypeException("URL is required for link documents.")
+                raise InvalidDocumentTypeException(
+                    "URL is required for link documents."
+                )
             return self._create_link_document(
                 name=name,
                 project_id=project_id,

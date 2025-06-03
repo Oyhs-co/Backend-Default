@@ -61,7 +61,7 @@ class ExternalToolConnectionDTO(BaseModel):
     account_email: Optional[str] = None
     account_id: Optional[str] = None
     is_active: bool = True
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
     created_at: datetime
     updated_at: Optional[datetime] = None
     last_used_at: Optional[datetime] = None
@@ -78,7 +78,7 @@ class ExternalToolConnectionCreateDTO(BaseModel):
     account_name: Optional[str] = None
     account_email: Optional[str] = None
     account_id: Optional[str] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
     expires_at: Optional[datetime] = None
 
 
@@ -94,7 +94,7 @@ class ExternalResourceDTO(BaseModel):
     path: Optional[str] = None
     size: Optional[int] = None
     last_modified: Optional[datetime] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
 
 
 class ExternalResourceSyncDTO(BaseModel):

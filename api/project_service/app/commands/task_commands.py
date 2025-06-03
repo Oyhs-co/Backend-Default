@@ -14,12 +14,10 @@ class Command(ABC):
     @abstractmethod
     def execute(self) -> Any:
         """Execute the command"""
-        pass
 
     @abstractmethod
     def undo(self) -> Any:
         """Undo the command"""
-        pass
 
 
 class TaskCommand(Command):

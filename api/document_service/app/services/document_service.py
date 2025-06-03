@@ -72,7 +72,7 @@ class DocumentService:
         )
 
         # Check if project exists
-        if not project:
+        if project is None:
             raise ProjectNotFoundException()
 
         # Check if user is a project member
@@ -85,7 +85,7 @@ class DocumentService:
             .first()
         )
 
-        if not project_member:
+        if project_member is None:
             raise NotProjectMemberException()
 
         # Check if parent document exists
@@ -99,7 +99,7 @@ class DocumentService:
                 .first()
             )
 
-            if not parent_document:
+            if parent_document is None:
                 raise DocumentNotFoundException("Parent document not found")
 
             # Check if parent document is a folder
@@ -178,11 +178,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to view document
-        if not self._has_permission(document_id, user_id, "view"):
+        if not bool(self._has_permission(document_id, user_id, "view")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to view this document"
             )
@@ -212,17 +212,17 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to edit document
-        if not self._has_permission(document_id, user_id, "edit"):
+        if not bool(self._has_permission(document_id, user_id, "edit")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to edit this document"
             )
 
         # Check if parent document exists
-        if document_data.parent_id:
+        if document_data.parent_id is not None:
             parent_document = (
                 self.db.query(Document)
                 .filter(
@@ -232,7 +232,7 @@ class DocumentService:
                 .first()
             )
 
-            if not parent_document:
+            if parent_document is None:
                 raise DocumentNotFoundException("Parent document not found")
 
             # Check if parent document is a folder
@@ -241,22 +241,22 @@ class DocumentService:
 
         # Update document
         if document_data.name is not None:
-            document.name = document_data.name
+            setattr(document, 'name', document_data.name)
 
         if document_data.parent_id is not None:
-            document.parent_id = document_data.parent_id
+            setattr(document, 'parent_id', document_data.parent_id)
 
         if document_data.description is not None:
-            document.description = document_data.description
+            setattr(document, 'description', document_data.description)
 
         if document_data.tags is not None:
-            document.tags = document_data.tags
+            setattr(document, 'tags', document_data.tags)
 
         if document_data.meta_data is not None:
-            document.meta_data = document_data.meta_data
+            setattr(document, 'meta_data', document_data.meta_data)
 
         # Update document in database
-        document.updated_at = datetime.now(timezone.utc)
+        setattr(document, 'updated_at', datetime.now(timezone.utc))
         self.db.commit()
         self.db.refresh(document)
 
@@ -282,11 +282,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to delete document
-        if not self._has_permission(document_id, user_id, "delete"):
+        if not bool(self._has_permission(document_id, user_id, "delete")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to delete this document"
             )
@@ -335,7 +335,7 @@ class DocumentService:
         project = self.db.query(Project).filter(Project.id == project_id).first()
 
         # Check if project exists
-        if not project:
+        if project is None:
             raise ProjectNotFoundException()
 
         # Check if user is a project member
@@ -347,7 +347,7 @@ class DocumentService:
             .first()
         )
 
-        if not project_member:
+        if project_member is None:
             raise NotProjectMemberException()
 
         # Get documents
@@ -363,7 +363,7 @@ class DocumentService:
         # Filter documents based on user permissions
         allowed_documents = []
         for document in documents:
-            if self._has_permission(document.id, user_id, "view"):
+            if bool(self._has_permission(document.id, user_id, "view")):
                 allowed_documents.append(document)
 
         # Return documents
@@ -444,7 +444,7 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if document type is file
@@ -454,7 +454,7 @@ class DocumentService:
             )
 
         # Check if user has permission to edit document
-        if not self._has_permission(document_id, user_id, "edit"):
+        if not bool(self._has_permission(document_id, user_id, "edit")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to edit this document"
             )
@@ -492,7 +492,7 @@ class DocumentService:
         document.version = new_version
         document.content_type = content_type
         document.url = url
-        document.updated_at = datetime.now(timezone.utc)
+        setattr(document, 'updated_at', datetime.now(timezone.utc))
 
         self.db.commit()
         self.db.refresh(document_version)
@@ -522,7 +522,7 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if document type is file
@@ -532,7 +532,7 @@ class DocumentService:
             )
 
         # Check if user has permission to view document
-        if not self._has_permission(document_id, user_id, "view"):
+        if not bool(self._has_permission(document_id, user_id, "view")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to view this document"
             )
@@ -571,11 +571,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to view document
-        if not self._has_permission(document_id, user_id, "view"):
+        if not bool(self._has_permission(document_id, user_id, "view")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to view this document"
             )
@@ -622,11 +622,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to share document
-        if not self._has_permission(document_id, user_id, "share"):
+        if not bool(self._has_permission(document_id, user_id, "share")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to share this document"
             )
@@ -658,7 +658,7 @@ class DocumentService:
             existing_permission.can_edit = permission_data.can_edit
             existing_permission.can_delete = permission_data.can_delete
             existing_permission.can_share = permission_data.can_share
-            existing_permission.updated_at = datetime.now(timezone.utc)
+            setattr(existing_permission, 'updated_at', datetime.now(timezone.utc))
 
             self.db.commit()
             self.db.refresh(existing_permission)
@@ -712,11 +712,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to share document
-        if not self._has_permission(document_id, user_id, "share"):
+        if not bool(self._has_permission(document_id, user_id, "share")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to share this document"
             )
@@ -749,7 +749,7 @@ class DocumentService:
             document_permission.can_share = permission_data.can_share
 
         # Update document permission in database
-        document_permission.updated_at = datetime.now(timezone.utc)
+        setattr(document_permission, 'updated_at', datetime.now(timezone.utc))
         self.db.commit()
         self.db.refresh(document_permission)
 
@@ -779,11 +779,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to share document
-        if not self._has_permission(document_id, user_id, "share"):
+        if not bool(self._has_permission(document_id, user_id, "share")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to share this document"
             )
@@ -836,11 +836,11 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             raise DocumentNotFoundException()
 
         # Check if user has permission to view document
-        if not self._has_permission(document_id, user_id, "view"):
+        if not bool(self._has_permission(document_id, user_id, "view")):
             raise InsufficientDocumentPermissionException(
                 "User does not have permission to view this document"
             )
@@ -876,7 +876,7 @@ class DocumentService:
         document = self.db.query(Document).filter(Document.id == document_id).first()
 
         # Check if document exists
-        if not document:
+        if document is None:
             return False
 
         # Check if user is document creator

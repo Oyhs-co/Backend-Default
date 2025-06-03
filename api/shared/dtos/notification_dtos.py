@@ -46,7 +46,7 @@ class NotificationCreateDTO(BaseModel):
     related_entity_type: Optional[str] = None
     related_entity_id: Optional[str] = None
     action_url: Optional[str] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
     scheduled_at: Optional[datetime] = None  # For scheduled notifications
 
 
@@ -63,7 +63,7 @@ class NotificationResponseDTO(BaseModel):
     related_entity_type: Optional[str] = None
     related_entity_id: Optional[str] = None
     action_url: Optional[str] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
     is_read: bool = False
     read_at: Optional[datetime] = None
     created_at: datetime
@@ -89,7 +89,7 @@ class NotificationBatchCreateDTO(BaseModel):
     related_entity_type: Optional[str] = None
     related_entity_id: Optional[str] = None
     action_url: Optional[str] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
     scheduled_at: Optional[datetime] = None
 
 

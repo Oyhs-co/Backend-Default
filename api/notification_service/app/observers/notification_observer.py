@@ -3,7 +3,6 @@ import smtplib
 from abc import ABC, abstractmethod
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from typing import Any, Dict
 
 import requests
 from dotenv import load_dotenv
@@ -41,7 +40,6 @@ class NotificationObserver(ABC):
         Args:
             notification (Notification): Notification to send
         """
-        pass
 
 
 class EmailNotificationObserver(NotificationObserver):

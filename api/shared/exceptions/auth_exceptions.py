@@ -1,7 +1,6 @@
 from typing import Any, Dict, Optional
 
 from .base_exceptions import (
-    BadRequestException,
     ConflictException,
     ForbiddenException,
     UnauthorizedException,

@@ -1,10 +1,8 @@
-from datetime import datetime
 from typing import Any, Dict, List, Optional
 
 from sqlalchemy.orm import Session
 
 from api.project_service.app.schemas.activity import ActivityLogResponseDTO
-from api.shared.exceptions.project_exceptions import ProjectNotFoundException
 from api.shared.models.project import ActivityLog
 
 

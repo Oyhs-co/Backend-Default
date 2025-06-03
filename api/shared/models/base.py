@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime, timezone
 from typing import Any, Dict
 
-from sqlalchemy import Column, DateTime, String, func
+from sqlalchemy import Column, DateTime, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()

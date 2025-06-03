@@ -23,7 +23,9 @@ class SupabaseManager:
     def __new__(cls) -> Any:
         if cls._instance is None:
             if not SUPABASE_URL or not SUPABASE_KEY:
-                raise ValueError("SUPABASE_URL and SUPABASE_KEY must be set in .env. Please check your environment configuration.")
+                raise ValueError(
+                    "SUPABASE_URL and SUPABASE_KEY must be set in .env. Please check your environment configuration."
+                )
             cls._instance = super(SupabaseManager, cls).__new__(cls)
             # Now we are sure SUPABASE_URL and SUPABASE_KEY are strings
             cls._instance.client = create_client(SUPABASE_URL, SUPABASE_KEY)

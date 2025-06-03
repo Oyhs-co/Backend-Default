@@ -3,6 +3,7 @@ from typing import Any, Dict, List
 
 from sqlalchemy.orm import Session
 
+from api.project_service.app.commands.task_commands import ChangeTaskStatusCommand
 from api.project_service.app.schemas.task import (
     TaskCommentCreateDTO,
     TaskCommentResponseDTO,
@@ -13,7 +14,6 @@ from api.project_service.app.schemas.task import (
     TaskUpdateDTO,
 )
 from api.project_service.app.services.activity_service import ActivityService
-from api.project_service.app.commands.task_commands import ChangeTaskStatusCommand, CommandInvoker
 from api.shared.exceptions.project_exceptions import (
     InsufficientProjectRoleException,
     InvalidTaskStatusTransitionException,

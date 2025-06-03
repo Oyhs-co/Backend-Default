@@ -5,7 +5,7 @@ from typing import Any, Dict, Optional
 import requests
 
 from api.external_tools_service.app.schemas.external_tools import ExternalToolType
-from api.shared.models.external_tools import ExternalToolConnection, OAuthProvider
+from api.shared.models.external_tools import OAuthProvider
 
 
 class OAuthAdapter(ABC):
@@ -29,7 +29,6 @@ class OAuthAdapter(ABC):
         Returns:
             str: Authorization URL
         """
-        pass
 
     @abstractmethod
     def exchange_code_for_token(
@@ -46,7 +45,6 @@ class OAuthAdapter(ABC):
         Returns:
             Dict[str, Any]: Token response
         """
-        pass
 
     @abstractmethod
     def refresh_token(
@@ -62,7 +60,6 @@ class OAuthAdapter(ABC):
         Returns:
             Dict[str, Any]: Token response
         """
-        pass
 
     @abstractmethod
     def get_user_info(
@@ -78,7 +75,6 @@ class OAuthAdapter(ABC):
         Returns:
             Dict[str, Any]: User information
         """
-        pass
 
     @abstractmethod
     def revoke_token(self, provider: OAuthProvider, access_token: str) -> bool:
@@ -92,7 +88,6 @@ class OAuthAdapter(ABC):
         Returns:
             bool: True if token was revoked, False otherwise
         """
-        pass
 
 
 class GitHubOAuthAdapter(OAuthAdapter):

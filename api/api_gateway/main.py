@@ -1,7 +1,5 @@
-import os
-from typing import Any, Dict
+from typing import Any
 
-import httpx
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
@@ -102,7 +100,7 @@ async def forward_request(
         headers["X-User-ID"] = request.state.user_id
 
     # Forward request to service using circuit breaker
-    response = await circuit_breaker.call_service(
+    response = await circuit_breaker.call_service(  # type: ignore
         service_name=service_name,
         url=target_url,
         method=request.method,

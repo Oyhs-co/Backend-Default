@@ -24,7 +24,7 @@ class DocumentCreateDTO(BaseModel):
     url: Optional[str] = None  # For links
     description: Optional[str] = None
     tags: Optional[List[str]] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
 
 
 class DocumentUpdateDTO(BaseModel):
@@ -34,7 +34,7 @@ class DocumentUpdateDTO(BaseModel):
     parent_id: Optional[str] = None
     description: Optional[str] = None
     tags: Optional[List[str]] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
 
 
 class DocumentResponseDTO(BaseModel):
@@ -52,7 +52,7 @@ class DocumentResponseDTO(BaseModel):
     version: int
     creator_id: str
     tags: Optional[List[str]] = None
-    metadata: Optional[Dict[str, Any]] = None
+    meta_data: Optional[Dict[str, Any]] = None
     created_at: datetime
     updated_at: Optional[datetime] = None
 

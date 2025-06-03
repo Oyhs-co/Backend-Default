@@ -9,8 +9,8 @@ from api.project_service.app.schemas.project import (
     ProjectMemberResponseDTO,
     ProjectMemberUpdateDTO,
     ProjectResponseDTO,
-    ProjectUpdateDTO,
     ProjectStatus,
+    ProjectUpdateDTO,
 )
 from api.project_service.app.services.activity_service import ActivityService
 from api.shared.exceptions.project_exceptions import (

@@ -24,6 +24,9 @@ pika = ">=1.3.2,<2.0.0"
 httpx = ">=0.28.1,<0.29.0"
 pydantic = {extras = ["email"], version = "^2.11.5"}
 autoflake = "^2.3.1"
+requests = "^2.32.3"
+types-sqlalchemy = "^1.4.53.38"
+typing-extensions = "^4.14.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
@@ -33,6 +36,7 @@ isort = "^6.0.1"
 flake8 = "^7.2.0"
 mypy = "^1.16.0"
 pytest-cov = "^6.1.1"
+requests = "^2.32.3"
 
 [tool.poetry.scripts]
 start = "uvicorn api.gateway.services.projects.app.main:app"
