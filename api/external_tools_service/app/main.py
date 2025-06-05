@@ -1,7 +1,7 @@
 from typing import Any, List
 
 from dotenv import load_dotenv
-from fastapi import Depends, FastAPI, Path, Security
+from fastapi import Depends, FastAPI, Path, Security, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
@@ -20,6 +20,9 @@ from api.shared.exceptions.auth_exceptions import InvalidTokenException
 from api.shared.utils.db import get_db
 from api.shared.utils.jwt import decode_token
 from api.shared.middleware.auth_middleware import auth_middleware
+from api.external_tools_service.app.services.analytics_tools import get_metabase_card_data
+from api.external_tools_service.app.services.ai_tools import query_huggingface
+from api.external_tools_service.app.services.calendar_tools import list_calendar_events, create_calendar_event
 
 # Load environment variables
 load_dotenv()
@@ -302,3 +305,34 @@ async def health_check() -> Any:
         Dict[str, str]: Health status
     """
     return {"status": "healthy"}
+
+
+@app.get("/analytics/card/{card_id}", tags=["Analytics"])
+async def analytics_card(card_id: int, session_token: str, metabase_url: str, supabase_bucket: str = None, supabase_path: str = None):
+    """
+    Obtiene datos de una tarjeta de Metabase y opcionalmente los guarda en Supabase.
+    """
+    data = get_metabase_card_data(card_id, session_token, metabase_url, supabase_bucket, supabase_path)
+    return {"data": data}
+
+
+@app.post("/ai/inference/{model}", tags=["AI"])
+async def ai_inference(model: str, payload: dict = Body(...), supabase_bucket: str = None, supabase_path: str = None):
+    """
+    Realiza inferencia con Hugging Face y opcionalmente guarda el resultado en Supabase.
+    """
+    result = query_huggingface(model, payload, supabase_bucket, supabase_path)
+    return {"result": result}
+
+
+@app.get("/calendar/events", tags=["Calendar"])
+async def calendar_events(calendar_path: str = None):
+    """Lista eventos del calendario CalDAV (Radicale)."""
+    return list_calendar_events(calendar_path)
+
+
+@app.post("/calendar/events", tags=["Calendar"])
+async def calendar_create_event(summary: str, dtstart: str, dtend: str, calendar_path: str = None):
+    """Crea un evento en el calendario CalDAV (Radicale)."""
+    from datetime import datetime
+    return create_calendar_event(summary, datetime.fromisoformat(dtstart), datetime.fromisoformat(dtend), calendar_path)

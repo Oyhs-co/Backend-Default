@@ -1,5 +1,6 @@
 from unittest.mock import patch, MagicMock
 from api.shared.utils.supabase import SupabaseManager
+import pytest
 
 def test_singleton_instance():
     inst1 = SupabaseManager()
@@ -23,4 +24,21 @@ def test_sign_in_calls_client():
     with patch.object(manager, 'client', create=True) as mock_client:
         mock_client.auth.sign_in_with_password.return_value = MagicMock(user=MagicMock(id='uid'))
         result = manager.sign_in('a@b.com', 'pass')
-        assert hasattr(result, 'user') 
+        assert hasattr(result, 'user')
+
+def test_sign_in_without_client(monkeypatch: pytest.MonkeyPatch) -> None:
+    manager = SupabaseManager()
+    monkeypatch.setattr(manager, 'client', None)
+    with pytest.raises(Exception):
+        manager.sign_in('a@b.com', 'pass')
+
+def test_sign_up_error(monkeypatch: pytest.MonkeyPatch) -> None:
+    manager = SupabaseManager()
+    class MockClient:
+        class auth:
+            @staticmethod
+            def sign_up(*args: object, **kwargs: object) -> None:
+                raise Exception("fail")
+    monkeypatch.setattr(manager, 'client', MockClient())
+    with pytest.raises(Exception):
+        manager.sign_up('a@b.com', 'pass', {}) 

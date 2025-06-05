@@ -26,17 +26,17 @@ def notification() -> Notification:
 
 def test_email_notify_enabled(notification: Notification) -> None:
     observer = EmailNotificationObserver()
-    with patch('smtplib.SMTP') as mock_smtp, \
+    with patch('api.external_tools_service.app.services.email_tools.send_email_brevo') as mock_brevo, \
          patch.object(observer, '_get_user_email', return_value='test@example.com'):
         observer.notify(notification)
-        mock_smtp.assert_called()
+        mock_brevo.assert_called()
 
 def test_email_notify_disabled() -> None:
     observer = EmailNotificationObserver()
     notif = make_notification([NotificationChannel.PUSH])
-    with patch('smtplib.SMTP') as mock_smtp:
+    with patch('api.external_tools_service.app.services.email_tools.send_email_brevo') as mock_brevo:
         observer.notify(notif)
-        mock_smtp.assert_not_called()
+        mock_brevo.assert_not_called()
 
 def test_push_notify_enabled(notification: Notification) -> None:
     observer = PushNotificationObserver()

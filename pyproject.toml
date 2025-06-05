@@ -27,6 +27,12 @@ autoflake = "^2.3.1"
 requests = "^2.32.3"
 types-sqlalchemy = "^1.4.53.38"
 typing-extensions = "^4.14.0"
+twilio = "^9.6.2"
+caldav = "^1.6.0"
+icalendar = "^6.3.1"
+sendgrid = "^6.11.0"
+sib-api-v3-sdk = "^7.6.0"
+
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"

@@ -8,6 +8,8 @@ from fastapi import (
     Path,
     Query,
     Security,
+    UploadFile,
+    File,
 )
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
@@ -28,6 +30,7 @@ from api.shared.exceptions.auth_exceptions import InvalidTokenException
 from api.shared.utils.db import get_db
 from api.shared.utils.jwt import decode_token
 from api.shared.middleware.auth_middleware import auth_middleware
+from api.external_tools_service.app.services.document_tools import process_document_with_libreoffice
 
 # Load environment variables
 load_dotenv()
@@ -414,6 +417,28 @@ async def get_document_permissions(
     """
     document_service = DocumentService(db)
     return document_service.get_document_permissions(document_id, user_id)
+
+
+@app.post("/documents/convert", tags=["Documents"])
+async def convert_document(
+    file: UploadFile = File(...),
+    output_format: str = "pdf",
+    supabase_bucket: str = "documents",
+    supabase_path: str = None,
+    user_id: str = Depends(get_current_user),
+):
+    """
+    Convierte un documento usando LibreOffice Online y lo sube a Supabase Storage.
+    """
+    import tempfile
+    import shutil
+    if not supabase_path:
+        supabase_path = f"converted/{file.filename}.{output_format}"
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        shutil.copyfileobj(file.file, tmp)
+        tmp_path = tmp.name
+    url = process_document_with_libreoffice(tmp_path, output_format, supabase_bucket, supabase_path)
+    return {"url": url}
 
 
 @app.get("/health", tags=["Health"])

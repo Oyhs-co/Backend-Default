@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from sqlalchemy.orm import Session
 
@@ -17,6 +17,16 @@ from api.shared.models.external_tools import (
     OAuthProvider,
 )
 
+# === INTEGRACIONES EXTERNAS ===
+# Las integraciones externas han sido movidas a archivos separados:
+# - document_tools.py (LibreOffice)
+# - analytics_tools.py (Metabase)
+# - ai_tools.py (Hugging Face)
+# - calendar_tools.py (Google Calendar)
+# - email_tools.py (Postal)
+# - push_tools.py (Gotify)
+# - sms_tools.py (Twilio)
+# - supabase_tools.py (Supabase)
 
 class ExternalToolsService:
     """Service for external tools operations"""

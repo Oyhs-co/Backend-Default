@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+*.sqlite3
+*.egg-info/
+*.egg
+*.log
+*.coverage
+.coverage*
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Environment & secrets
+.env
+.env.*
+*.env
+
+# Test & coverage
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+coverage.xml
+all_output.txt
+coverage_output.txt
+coverage_missing.txt
+logs_tests.txt
+
+# IDEs & editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+docker-build.*
+
+# System
+.DS_Store
+Thumbs.db
+
+# Node/npm (if any frontend or docs)
+node_modules/
+
+# Qodo (if used)
+.qodo/
+
+# Poetry
+poetry.lock
+
+# Misc
+*.old
+*.orig
+*.rej
+
+# Exclude compiled sources
+sources/**/*.c
+sources/**/*.o
+sources/**/*.so
+
+# Exclude user files
+user.txt
+
+# Exclude repair scripts
+repair_project.py
+fix_*.py 

@@ -1,0 +1,64 @@
+# Pasos para ejecutar correctamente la integración de APIs externas y microservicios
+
+1. **Variables de entorno (.env):**
+   - Configura las siguientes variables en tu archivo `.env`:
+     - SUPABASE_URL y SUPABASE_KEY (de tu proyecto Supabase)
+     - LIBREOFFICE_ONLINE_URL="http://libreoffice:9980/lool/convert-to/"
+     - HUGGINGFACE_API_TOKEN="tu_token_huggingface"
+     - POSTAL_HOST="mailpit"
+     - POSTAL_PORT="1025"
+     - POSTAL_FROM="remitente@tudominio.com"
+     - GOTIFY_URL="http://gotify:80"
+     - GOTIFY_TOKEN="tu_token_gotify"
+     - TWILIO_ACCOUNT_SID="tu_sid"
+     - TWILIO_AUTH_TOKEN="tu_token"
+     - TWILIO_FROM_NUMBER="+1234567890"
+     - GOOGLE_APPLICATION_CREDENTIALS="/ruta/credenciales.json" (monta el archivo en el contenedor si usas Docker)
+     - METABASE_URL="http://metabase:3000"
+
+2. **Levantar servicios con Docker Compose:**
+   - Ejecuta:
+     ```sh
+     docker-compose up -d
+     ```
+   - Esto levantará los servicios de LibreOffice Online, Metabase, Gotify y Mailpit, además de tus microservicios.
+
+3. **Configurar Metabase:**
+   - Accede a Metabase en http://localhost:3000 y realiza la configuración inicial.
+   - Obtén el session_token para usar la API.
+
+4. **Configurar Gotify:**
+   - Accede a http://localhost:8080 y crea una aplicación para obtener el token de API.
+
+5. **Configurar Mailpit (Email):**
+   - Accede a http://localhost:8025 para ver los correos enviados.
+   - Los emails enviados desde la app llegarán aquí para pruebas.
+
+6. **Configurar Google Calendar:**
+   - Crea un proyecto en Google Cloud, habilita la API de Calendar y descarga el archivo de credenciales.
+   - Monta el archivo en el contenedor o colócalo en la ruta especificada en GOOGLE_APPLICATION_CREDENTIALS.
+
+7. **Configurar Hugging Face:**
+   - Regístrate en https://huggingface.co, genera un token y colócalo en HUGGINGFACE_API_TOKEN.
+
+8. **Configurar Twilio:**
+   - Regístrate en https://www.twilio.com/, crea un número y obtén el SID y Auth Token.
+
+9. **Probar endpoints:**
+   - Documentos: POST `/documents/convert` (en document_service)
+   - Analítica: GET `/analytics/card/{card_id}` (en external_tools_service)
+   - IA: POST `/ai/inference/{model}` (en external_tools_service)
+   - Calendario: GET `/calendar/events` (en external_tools_service)
+   - Notificaciones: Usa los endpoints de notification_service para enviar notificaciones por email (ver en Mailpit), push y SMS.
+
+10. **Dependencias Python:**
+    - Instala las dependencias necesarias en cada microservicio:
+      - `pip install requests google-api-python-client google-auth twilio python-dotenv supabase`
+      - Si usas Poetry, agrégalas en el pyproject.toml correspondiente.
+
+11. **Notas:**
+    - Si necesitas exponer puertos distintos, edita el `docker-compose.yml`.
+    - Si usas Windows, asegúrate de que los paths de volúmenes sean correctos.
+    - Para reducir el peso de la imagen Docker, usa imágenes base slim y limpia dependencias innecesarias en tus Dockerfile.
+
+¡Listo! Con esto tendrás una arquitectura funcional y hermética para tus integraciones externas. 

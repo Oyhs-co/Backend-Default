@@ -1,0 +1,255 @@
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:9:api\tests\api_gateway\middleware\test_auth_middleware.py ....            [  2%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:10:api\tests\api_gateway\middleware\test_circuit_breaker.py ...             [  3%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:11:api\tests\api_gateway\utils\test_service_registry.py .....               [  6%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:12:api\tests\auth\test_auth_service.py .......                              [ 10%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:13:api\tests\document\test_document_decorators.py ......                    [ 13%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:14:api\tests\document\test_document_factory.py .....                        [ 16%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:15:api\tests\document\test_document_service.py ....                         [ 18%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:16:api\tests\external_tools\test_external_tools_service.py ..               [ 19%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:17:api\tests\external_tools\test_oauth_adapter.py ..........                [ 24%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:18:api\tests\integration\test_api_gateway.py FF                             [ 25%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:19:api\tests\integration\test_auth_service.py ..                            [ 26%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:20:api\tests\integration\test_document_service.py .F                        [ 27%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:21:api\tests\integration\test_external_tools_service.py .F                  [ 28%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:22:api\tests\integration\test_notification_service.py .F                    [ 29%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:23:api\tests\integration\test_project_service.py .F                         [ 31%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:24:api\tests\notification\test_notification_observer.py ......              [ 34%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:25:api\tests\notification\test_notification_service.py ...                  [ 35%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:26:api\tests\project\test_project_service.py ....                           [ 37%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:27:api\tests\project\test_task_commands.py ....                             [ 40%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:28:api\tests\project\test_task_service.py ....                              [ 42%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:29:api\tests\shared\dtos\test_auth_dtos.py ......                           [ 45%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:30:api\tests\shared\dtos\test_document_dtos.py ..........                   [ 50%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:31:api\tests\shared\dtos\test_external_tools_dtos.py ........               [ 55%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:32:api\tests\shared\dtos\test_notification_dtos.py ........                 [ 59%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:33:api\tests\shared\dtos\test_project_dtos.py ..............                [ 66%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:34:api\tests\shared\exceptions\test_auth_exceptions.py .......              [ 70%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:35:api\tests\shared\exceptions\test_base_exceptions.py .........            [ 75%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:36:api\tests\shared\exceptions\test_document_exceptions.py ........         [ 79%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:37:api\tests\shared\exceptions\test_project_exceptions.py ........          [ 83%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:38:api\tests\shared\models\test_document_models.py ...                      [ 85%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:39:api\tests\shared\models\test_external_tools_models.py ...                [ 87%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:40:api\tests\shared\models\test_notification_models.py ..                   [ 88%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:41:api\tests\shared\models\test_project_models.py .....                     [ 90%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:42:api\tests\shared\models\test_user_models.py ....                         [ 93%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:43:api\tests\shared\utils\test_db.py .                                      [ 93%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:44:api\tests\shared\utils\test_jwt.py .....                                 [ 96%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:45:api\tests\shared\utils\test_rabbitmq.py ...                              [ 97%]
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:46:api\tests\shared\utils\test_supabase.py ....                             [100%]
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:47:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:48:================================== FAILURES ===================================
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:49:______________________________ test_health_check ______________________________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:50:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:51:    @patch("api.api_gateway.main.auth_middleware", new=_pass_auth_middleware)
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:52:    @patch("api.api_gateway.main.circuit_breaker_middleware", new=_pass_circuit_breaker_middleware)
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:53:    def test_health_check() -> None:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:54:        response = client.get("/health")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:55:>       assert response.status_code == 200
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:56:E       assert 500 == 200
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:59:api\tests\integration\test_api_gateway.py:18: AssertionError
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:60:______________________________ test_get_services ______________________________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:61:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:62:mock_services = <MagicMock name='get_all_services' id='3083589299872'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:63:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:64:    @patch("api.api_gateway.main.auth_middleware", new=_pass_auth_middleware)
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:65:    @patch("api.api_gateway.main.circuit_breaker_middleware", new=_pass_circuit_breaker_middleware)
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:66:    @patch("api.api_gateway.utils.service_registry.service_registry.get_all_services", return_value=[{"name": "test", "url": "http://localhost"}])
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:67:    def test_get_services(mock_services: MagicMock) -> None:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:68:        response = client.get("/services")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:69:>       assert response.status_code == 200
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:73:api\tests\integration\test_api_gateway.py:26: AssertionError
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:74:____________________________ test_create_document _____________________________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:75:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:76:mock_create_document = <MagicMock name='create_document' id='3083589216368'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:77:mock_db = <MagicMock name='get_db' id='3083589253648'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:78:mock_user = <MagicMock name='get_current_user' id='3083589245440'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:79:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:80:    @patch("api.document_service.app.main.get_current_user", return_value="uid")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:81:    @patch("api.document_service.app.main.get_db", return_value=MagicMock())
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:82:    @patch("api.document_service.app.services.document_service.DocumentService.create_document")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:83:    @patch("api.document_service.app.main.auth_middleware", new=_pass_auth_middleware)
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:106:api\tests\integration\test_document_service.py:37: AssertionError
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:107:__________________________ test_get_oauth_providers ___________________________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:108:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:109:mock_get_oauth_providers = <MagicMock name='get_oauth_providers' id='3083589211280'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:110:mock_db = <MagicMock name='get_db' id='3083589248896'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:111:mock_user = <MagicMock name='get_current_user' id='3083589239728'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:112:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:113:    @patch("api.external_tools_service.app.main.get_current_user", return_value="uid")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:114:    @patch("api.external_tools_service.app.main.get_db", return_value=MagicMock())
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:115:    @patch("api.external_tools_service.app.services.external_tools_service.ExternalToolsService.get_oauth_providers")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:116:    @patch("api.external_tools_service.app.main.auth_middleware", new=_pass_auth_middleware)
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:137:api\tests\integration\test_external_tools_service.py:35: AssertionError
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:138:__________________________ test_create_notification ___________________________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:139:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:140:mock_create_notification = <MagicMock name='create_notification' id='3083589184848'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:141:mock_db = <MagicMock name='get_db' id='3083589042000'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:142:mock_user = <MagicMock name='get_current_user' id='3083589026448'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:143:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:144:    @patch("api.notification_service.app.main.get_current_user", return_value="uid")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:145:    @patch("api.notification_service.app.main.get_db", return_value=MagicMock())
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:146:    @patch("api.notification_service.app.services.notification_service.NotificationService.create_notification")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:147:    @patch("api.notification_service.app.main.auth_middleware", new=_pass_auth_middleware)
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:172:api\tests\integration\test_notification_service.py:39: AssertionError
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:173:_____________________________ test_create_project _____________________________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:174:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:175:mock_create_project = <MagicMock name='create_project' id='3083589219296'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:176:mock_db = <MagicMock name='get_db' id='3083589031200'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:177:mock_user = <MagicMock name='get_current_user' id='3083589090528'>
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:178:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:179:    @patch("api.project_service.app.main.get_current_user", return_value="uid")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:180:    @patch("api.project_service.app.main.get_db", return_value=MagicMock())
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:181:    @patch("api.project_service.app.services.project_service.ProjectService.create_project")
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:182:    @patch("api.project_service.app.main.auth_middleware", new=_pass_auth_middleware)
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:201:api\tests\integration\test_project_service.py:33: AssertionError
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:202:=============================== tests coverage ================================
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:203:_______________ coverage: platform win32, python 3.12.4-final-0 _______________
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:204:
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:205:Name                                                                Stmts   Miss  Cover   Missing
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:206:-------------------------------------------------------------------------------------------------
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:207:api\__init__.py                                                         3      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:208:api\api_gateway\__init__.py                                             0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:209:api\api_gateway\main.py                                                39      6    85%   66, 70, 100, 113, 128, 141
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:210:api\api_gateway\middleware\__init__.py                                  0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:211:api\api_gateway\middleware\auth_middleware.py                          45     15    67%   53, 117-154
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:212:api\api_gateway\middleware\circuit_breaker.py                          68     11    84%   74-76, 96, 117-118, 144, 155-157, 160-162
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:213:api\api_gateway\routes\__init__.py                                      0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:214:api\api_gateway\utils\__init__.py                                       0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:215:api\api_gateway\utils\service_registry.py                              41      1    98%   233
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:216:api\auth_service\__init__.py                                            0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:217:api\auth_service\app\__init__.py                                        0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:218:api\auth_service\app\config\__init__.py                                 0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:219:api\auth_service\app\main.py                                           33      5    85%   67, 80, 94, 108, 122
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:220:api\auth_service\app\models\__init__.py                                 0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:221:api\auth_service\app\repository\__init__.py                             0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:222:api\auth_service\app\repository\supabase_client.py                     11     11     0%   1-15
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:223:api\auth_service\app\schemas\__init__.py                                0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:224:api\auth_service\app\schemas\user.py                                   29      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:225:api\auth_service\app\services\__init__.py                               0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:226:api\auth_service\app\services\auth_service.py                          73     23    68%   72-76, 171-203, 218-226, 251
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:227:api\document_service\__init__.py                                        0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:228:api\document_service\app\__init__.py                                    0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:229:api\document_service\app\decorators\__init__.py                         0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:230:api\document_service\app\decorators\document_decorators.py             45      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:231:api\document_service\app\factories\__init__.py                          0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:232:api\document_service\app\factories\document_factory.py                 21      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:233:api\document_service\app\main.py                                       80     30    62%   70-75, 98-99, 121-122, 146-147, 167-168, 194-195, 217-218, 247-248, 274-275, 301-302, 329-330, 360-361, 388-389, 415-416
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:234:api\document_service\app\middleware\__init__.py                         0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:235:api\document_service\app\schemas\__init__.py                            0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:236:api\document_service\app\schemas\document.py                           76      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:237:api\document_service\app\services\__init__.py                           0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:238:api\document_service\app\services\document_service.py                 260    197    24%   76, 89, 93-107, 185-191, 216, 225-264, 286, 290, 296-307, 335-370, 391-421, 444-501, 522-549, 571-598, 622-685, 712-757, 779-816, 836-856, 876-948, 960, 990, 1014
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:239:api\external_tools_service\__init__.py                                  0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:240:api\external_tools_service\app\__init__.py                              0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:241:api\external_tools_service\app\adapters\__init__.py                     0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:242:api\external_tools_service\app\adapters\oauth_adapter.py              107     34    68%   126-127, 159, 170-179, 223-225, 245-257, 293-294, 333-342, 358-385, 411-413, 432-439
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:243:api\external_tools_service\app\main.py                                 68     24    65%   62-67, 89-90, 114-115, 135-136, 156-157, 180-181, 200-201, 225-226, 250-251, 271-272, 292-293
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:244:api\external_tools_service\app\middleware\__init__.py                   0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:245:api\external_tools_service\app\schemas\__init__.py                      0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:246:api\external_tools_service\app\schemas\external_tools.py               75      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:247:api\external_tools_service\app\services\__init__.py                     0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:248:api\external_tools_service\app\services\external_tools_service.py     139    104    25%   42-45, 61-70, 86-108, 127-215, 242, 265-284, 346-360, 379-430, 447-486, 503-540, 552, 577-583
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:249:api\notification_service\__init__.py                                    0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:250:api\notification_service\app\__init__.py                                0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:251:api\notification_service\app\main.py                                   66     24    64%   62-67, 93-99, 126-127, 153-154, 180-181, 205-206, 223-224, 244-245, 267-268, 292-293
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:252:api\notification_service\app\middleware\__init__.py                     0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:253:api\notification_service\app\observers\__init__.py                      0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:254:api\notification_service\app\observers\notification_observer.py        81      9    89%   75-77, 91, 157-159, 173, 233-235, 249
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:255:api\notification_service\app\schemas\__init__.py                        0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:256:api\notification_service\app\schemas\notification.py                   87      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:257:api\notification_service\app\services\__init__.py                       0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:258:api\notification_service\app\services\notification_service.py         133     72    46%   63, 65, 67, 73-80, 84-92, 203-213, 232-251, 264-272, 289-304, 317-320, 348-392, 417-440, 487
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:259:api\project_service\__init__.py                                         0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:260:api\project_service\app\__init__.py                                     0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:261:api\project_service\app\commands\__init__.py                            0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:262:api\project_service\app\commands\task_commands.py                      99      3    97%   52, 264, 282
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:263:api\project_service\app\main.py                                       144     72    50%   79-84, 107-108, 125-126, 146-147, 169-170, 190-191, 218-219, 243-244, 272-273, 297-298, 323-324, 346-347, 373-374, 402-403, 425-426, 455-456, 482-483, 513-519, 549-572, 615-638, 679-716, 743-780
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:264:api\project_service\app\middleware\__init__.py                          0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:265:api\project_service\app\schemas\__init__.py                             0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:266:api\project_service\app\schemas\activity.py                            17      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:267:api\project_service\app\schemas\project.py                             49      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:268:api\project_service\app\schemas\task.py                                57      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:269:api\project_service\app\services\__init__.py                            0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:270:api\project_service\app\services\activity_service.py                   24     12    50%   45-60, 80-90, 108-121, 138-148, 160
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:271:api\project_service\app\services\project_service.py                   148    102    31%   115-127, 153, 165, 172-209, 232, 244, 253-267, 280-291, 313-388, 415-473, 495-551, 571-597, 609, 635
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:272:api\project_service\app\services\task_service.py                      144     86    40%   63, 75, 134-157, 186, 198, 209, 222-292, 319, 331, 342, 349, 386-408, 435-502, 524-559, 571, 597
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:273:api\shared\__init__.py                                                  0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:274:api\shared\dtos\__init__.py                                             0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:275:api\shared\dtos\auth_dtos.py                                           27      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:276:api\shared\dtos\document_dtos.py                                       64     64     0%   1-93
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:277:api\shared\dtos\external_tools_dtos.py                                 76      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:278:api\shared\dtos\notification_dtos.py                                   76      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:279:api\shared\dtos\project_dtos.py                                       102      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:280:api\shared\exceptions\__init__.py                                       0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:281:api\shared\exceptions\auth_exceptions.py                               23      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:282:api\shared\exceptions\base_exceptions.py                               32      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:283:api\shared\exceptions\document_exceptions.py                           26      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:284:api\shared\exceptions\project_exceptions.py                            26      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:285:api\shared\middleware\__init__.py                                       0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:286:api\shared\middleware\auth_middleware.py                               45     33    27%   30-55, 72-82, 96-101, 117-154
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:287:api\shared\models\__init__.py                                           0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:288:api\shared\models\base.py                                              15      1    93%   18
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:289:api\shared\models\document.py                                          43      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:290:api\shared\models\external_tools.py                                    51      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:291:api\shared\models\notification.py                                      34      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:292:api\shared\models\project.py                                           59      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:293:api\shared\models\user.py                                              34      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:294:api\shared\utils\__init__.py                                            0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:295:api\shared\utils\db.py                                                 14      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:296:api\shared\utils\jwt.py                                                40      6    85%   62, 118-124
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:297:api\shared\utils\rabbitmq.py                                           76     28    63%   58-60, 84, 102-104, 117-119, 139-146, 167-184, 188-190
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:298:api\shared\utils\supabase.py                                           43     10    77%   26, 59, 71, 114, 126, 138, 150, 167, 184, 197
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:299:api\tests\__init__.py                                                   0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:300:api\tests\api_gateway\middleware\test_auth_middleware.py               48      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:301:api\tests\api_gateway\middleware\test_circuit_breaker.py               47      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:302:api\tests\api_gateway\utils\test_service_registry.py                   22      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:303:api\tests\auth\__init__.py                                              0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:304:api\tests\auth\test_auth_service.py                                    70      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:305:api\tests\document\__init__.py                                          0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:306:api\tests\document\test_document_decorators.py                         62      2    97%   30, 45
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:307:api\tests\document\test_document_factory.py                            33      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:308:api\tests\document\test_document_service.py                            40      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:309:api\tests\external_tools\__init__.py                                    0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:310:api\tests\external_tools\test_external_tools_service.py                33      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:311:api\tests\external_tools\test_oauth_adapter.py                         83      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:312:api\tests\integration\test_api_gateway.py                              22      4    82%   9, 12, 19, 27
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:313:api\tests\integration\test_auth_service.py                             18      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:314:api\tests\integration\test_document_service.py                         24      3    88%   7, 38-39
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:315:api\tests\integration\test_external_tools_service.py                   24      4    83%   7, 36-38
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:316:api\tests\integration\test_notification_service.py                     24      3    88%   7, 40-41
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:317:api\tests\integration\test_project_service.py                          24      3    88%   7, 34-35
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:318:api\tests\notification\__init__.py                                      0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:319:api\tests\notification\test_notification_observer.py                   54      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:320:api\tests\notification\test_notification_service.py                    57      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:321:api\tests\project\__init__.py                                           0      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:322:api\tests\project\test_project_service.py                              39      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:323:api\tests\project\test_task_commands.py                                33      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:324:api\tests\project\test_task_service.py                                 40      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:325:api\tests\shared\dtos\test_auth_dtos.py                                36      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:326:api\tests\shared\dtos\test_document_dtos.py                            39      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:327:api\tests\shared\dtos\test_external_tools_dtos.py                      45      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:328:api\tests\shared\dtos\test_notification_dtos.py                        42      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:329:api\tests\shared\dtos\test_project_dtos.py                             65      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:330:api\tests\shared\exceptions\test_auth_exceptions.py                    36      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:331:api\tests\shared\exceptions\test_base_exceptions.py                    49      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:332:api\tests\shared\exceptions\test_document_exceptions.py                42      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:333:api\tests\shared\exceptions\test_project_exceptions.py                 42      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:334:api\tests\shared\models\test_document_models.py                        22      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:335:api\tests\shared\models\test_external_tools_models.py                  22      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:336:api\tests\shared\models\test_notification_models.py                    18      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:337:api\tests\shared\models\test_project_models.py                         29      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:338:api\tests\shared\models\test_user_models.py                            24      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:339:api\tests\shared\utils\test_db.py                                      10      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:340:api\tests\shared\utils\test_jwt.py                                     28      0   100%
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:341:api\tests\shared\utils\test_rabbitmq.py                                25      1    96%   27
+> C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:342:api\tests\shared\utils\test_supabase.py                                22      0   100%
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:343:-------------------------------------------------------------------------------------------------
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:344:TOTAL                                                                4561   1003    78%
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:345:=========================== short test summary info ===========================
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:346:FAILED api/tests/integration/test_api_gateway.py::test_health_check - assert ...
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:347:FAILED api/tests/integration/test_api_gateway.py::test_get_services - assert ...
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:348:FAILED api/tests/integration/test_document_service.py::test_create_document
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:349:FAILED api/tests/integration/test_external_tools_service.py::test_get_oauth_providers
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:350:FAILED api/tests/integration/test_notification_service.py::test_create_notification
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:351:FAILED api/tests/integration/test_project_service.py::test_create_project - a...
+  C:\Users\ACER\Documents\Proyectos - Software\Python\2025\Backend-Default\all_output.txt:352:======================= 6 failed, 181 passed in 32.13s ========================

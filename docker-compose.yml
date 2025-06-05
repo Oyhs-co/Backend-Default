@@ -177,9 +177,52 @@ services:
       - taskhub-network
     restart: unless-stopped
 
+  libreoffice:
+    image: collabora/code
+    ports:
+      - "9980:9980"
+    environment:
+      - domain=.*
+      - username=admin
+      - password=admin
+    command: --o:ssl.enable=false --o:net.listen.allow=0.0.0.0
+    restart: unless-stopped
+    networks:
+      - taskhub-network
+
+  metabase:
+    image: metabase/metabase
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - taskhub-network
+
+  gotify:
+    image: gotify/server
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - taskhub-network
+
+  radicale:
+    image: tomsquest/docker-radicale:latest
+    container_name: radicale
+    ports:
+      - "5232:5232"
+    volumes:
+      - radicale_data:/data
+    environment:
+      - RADICALE_CONFIG=/data/config
+    restart: unless-stopped
+    networks:
+      - taskhub-network
+
 networks:
   taskhub-network:
     driver: bridge
 
 volumes:
   rabbitmq_data:
+  radicale_data:
