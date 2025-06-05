@@ -23,7 +23,7 @@ class NotificationObserver(ABC):
 
 class EmailNotificationObserver(NotificationObserver):
     """Observer for email notifications"""
-
+    
     def notify(self, notification: Notification) -> None:
         """
         Send notification via email (Brevo).
@@ -31,7 +31,7 @@ class EmailNotificationObserver(NotificationObserver):
         Args:
             notification (Notification): Notification to send
         """
-        if NotificationChannel.EMAIL not in (notification.channels or {}):
+        if NotificationChannel.EMAIL not in notification.channels:
             return
         try:
             to = self._get_user_email(notification.user_id)
@@ -98,9 +98,10 @@ class EmailNotificationObserver(NotificationObserver):
         return body
 
 
+
 class PushNotificationObserver(NotificationObserver):
     """Observer for push notifications"""
-
+    
     def notify(self, notification: Notification) -> None:
         """
         Send notification via push.
@@ -108,7 +109,7 @@ class PushNotificationObserver(NotificationObserver):
         Args:
             notification (Notification): Notification to send
         """
-        if NotificationChannel.PUSH not in (notification.channels or {}):
+        if NotificationChannel.PUSH not in notification.channels:
             return
         try:
             message = notification.message
@@ -118,9 +119,10 @@ class PushNotificationObserver(NotificationObserver):
             print(f"Error sending push notification: {e}")
 
 
+
 class SMSNotificationObserver(NotificationObserver):
     """Observer for SMS notifications"""
-
+    
     def notify(self, notification: Notification) -> None:
         """
         Send notification via SMS.
@@ -128,7 +130,7 @@ class SMSNotificationObserver(NotificationObserver):
         Args:
             notification (Notification): Notification to send
         """
-        if NotificationChannel.SMS not in (notification.channels or {}):
+        if NotificationChannel.SMS not in notification.channels:
             return
         try:
             phone_number = self._get_user_phone_number(notification.user_id)

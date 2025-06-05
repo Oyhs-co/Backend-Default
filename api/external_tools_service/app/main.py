@@ -336,3 +336,9 @@ async def calendar_create_event(summary: str, dtstart: str, dtend: str, calendar
     """Crea un evento en el calendario CalDAV (Radicale)."""
     from datetime import datetime
     return create_calendar_event(summary, datetime.fromisoformat(dtstart), datetime.fromisoformat(dtend), calendar_path)
+
+
+# Export para tests de integración
+get_db = get_db
+get_current_user = get_current_user
+auth_middleware = auth_middleware

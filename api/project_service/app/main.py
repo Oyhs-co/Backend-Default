@@ -789,3 +789,8 @@ async def health_check() -> Any:
         Dict[str, str]: Health status
     """
     return {"status": "healthy"}
+
+# Export para tests de integración
+get_db = get_db
+get_current_user = get_current_user
+auth_middleware = auth_middleware

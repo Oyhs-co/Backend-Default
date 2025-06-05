@@ -139,3 +139,7 @@ async def get_services() -> Any:
 
     """
     return service_registry.get_all_services()
+
+# Export para tests de integración
+# (No existen get_db ni get_current_user aquí, pero exporto auth_middleware por consistencia)
+auth_middleware = auth_middleware

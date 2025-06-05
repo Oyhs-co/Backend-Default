@@ -2,6 +2,7 @@ import os
 from typing import Any, Dict, List
 
 from dotenv import load_dotenv
+import requests
 
 # Load environment variables
 load_dotenv()
@@ -249,6 +250,17 @@ class ServiceRegistry:
             {"name": name, "url": service["url"], "routes": service["routes"]}
             for name, service in self.services.items()
         ]
+
+    def is_healthy(self) -> bool:
+        """Check if all registered services are healthy."""
+        try:
+            for service in self.services.values():
+                response = requests.get(f"{service['url']}/health")
+                if response.status_code != 200:
+                    return False
+            return True
+        except Exception:
+            return False
 
 
 # Create global service registry

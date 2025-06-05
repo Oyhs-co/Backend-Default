@@ -45,23 +45,25 @@ def test_close_connection(monkeypatch: Any) -> None:
     manager = RabbitMQManager()
     from unittest.mock import MagicMock
     mock_conn = MagicMock()
-    mock_conn.is_closed = False
-    monkeypatch.setattr(manager, '_connection', mock_conn)
+    mock_conn.is_open = True
+    mock_close = MagicMock()
+    mock_conn.close = mock_close
+    monkeypatch.setattr(manager, 'connection', mock_conn)
     manager.close()
-    mock_conn.close.assert_called_once()
+    mock_close.assert_called_once()
 
 def test_close_connection_already_closed(monkeypatch: Any):
     from api.shared.utils.rabbitmq import RabbitMQManager
     manager = RabbitMQManager()
     from unittest.mock import MagicMock
     mock_conn = MagicMock()
-    mock_conn.is_closed = True
-    monkeypatch.setattr(manager, '_connection', mock_conn)
+    mock_conn.is_open = False
+    monkeypatch.setattr(manager, 'connection', mock_conn)
     manager.close()
     mock_conn.close.assert_not_called()
 
 def test_close_connection_none(monkeypatch: Any):
     from api.shared.utils.rabbitmq import RabbitMQManager
     manager = RabbitMQManager()
-    monkeypatch.setattr(manager, '_connection', None)
-    manager.close()  # Should not raise 
+    monkeypatch.setattr(manager, 'connection', None)
+    manager.close()  # Should not raise
